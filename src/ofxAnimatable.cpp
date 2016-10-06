@@ -428,20 +428,20 @@ std::string ofxAnimatable::getCurveName(AnimCurve c){
 		case SWIFT_GOOGLE: return "SWIFT_GOOGLE";
 		case OBJECT_DROP: return "OBJECT_DROP";
 
-		case EASE_IN_BACK: return "EASE_IN_BACK";
-		case EASE_OUT_BACK: return "EASE_OUT_BACK";
-		case EASE_IN_OUT_BACK: return "EASE_IN_OUT_BACK";
-		case EASE_OUT_IN_BACK: return "EASE_OUT_IN_BACK";
-
-		case EASE_IN_BOUNCE: return "EASE_IN_BOUNCE";
-		case EASE_OUT_BOUNCE: return "EASE_OUT_BOUNCE";
-		case EASE_IN_OUT_BOUNCE: return "EASE_IN_OUT_BOUNCE";
-		case EASE_OUT_IN_BOUNCE: return "EASE_OUT_IN_BOUNCE";
-
-		case EASE_IN_ELASTIC: return "EASE_IN_ELASTIC";
-		case EASE_OUT_ELASTIC: return "EASE_OUT_ELASTIC";
-		case EASE_IN_OUT_ELASTIC: return "EASE_IN_OUT_ELASTIC";
-		case EASE_OUT_IN_ELASTIC: return "EASE_OUT_IN_ELASTIC";
+//		case EASE_IN_BACK: return "EASE_IN_BACK";
+//		case EASE_OUT_BACK: return "EASE_OUT_BACK";
+//		case EASE_IN_OUT_BACK: return "EASE_IN_OUT_BACK";
+//		case EASE_OUT_IN_BACK: return "EASE_OUT_IN_BACK";
+//
+//		case EASE_IN_BOUNCE: return "EASE_IN_BOUNCE";
+//		case EASE_OUT_BOUNCE: return "EASE_OUT_BOUNCE";
+//		case EASE_IN_OUT_BOUNCE: return "EASE_IN_OUT_BOUNCE";
+//		case EASE_OUT_IN_BOUNCE: return "EASE_OUT_IN_BOUNCE";
+//
+//		case EASE_IN_ELASTIC: return "EASE_IN_ELASTIC";
+//		case EASE_OUT_ELASTIC: return "EASE_OUT_ELASTIC";
+//		case EASE_IN_OUT_ELASTIC: return "EASE_IN_OUT_ELASTIC";
+//		case EASE_OUT_IN_ELASTIC: return "EASE_OUT_IN_ELASTIC";
 
 		case BOUNCE_IN_CUSTOM: return "BOUNCE_IN_CUSTOM";
 		case BOUNCE_OUT_CUSTOM: return "BOUNCE_OUT_CUSTOM";
@@ -485,20 +485,20 @@ AnimCurve ofxAnimatable::getCurveFromName(const string& name){
 	if(name == "EXPONENTIAL_SIGMOID_PARAM") return EXPONENTIAL_SIGMOID_PARAM;
 	if(name == "SWIFT_GOOGLE") return SWIFT_GOOGLE;
 	if(name == "OBJECT_DROP") return OBJECT_DROP;
-	if(name == "EASE_IN_BACK") return EASE_IN_BACK;
-	if(name == "EASE_OUT_BACK") return EASE_OUT_BACK;
-	if(name == "EASE_IN_OUT_BACK") return EASE_IN_OUT_BACK;
-	if(name == "EASE_OUT_IN_BACK") return EASE_OUT_IN_BACK;
-
-	if(name == "EASE_IN_BOUNCE") return EASE_IN_BOUNCE;
-	if(name == "EASE_OUT_BOUNCE") return EASE_OUT_BOUNCE;
-	if(name == "EASE_IN_OUT_BOUNCE") return EASE_IN_OUT_BOUNCE;
-	if(name == "EASE_OUT_IN_BOUNCE") return EASE_OUT_IN_BOUNCE;
-
-	if(name == "EASE_IN_ELASTIC") return EASE_IN_ELASTIC;
-	if(name == "EASE_OUT_ELASTIC") return EASE_OUT_ELASTIC;
-	if(name == "EASE_IN_OUT_ELASTIC") return EASE_IN_OUT_ELASTIC;
-	if(name == "EASE_OUT_IN_ELASTIC") return EASE_OUT_IN_ELASTIC;
+//	if(name == "EASE_IN_BACK") return EASE_IN_BACK;
+//	if(name == "EASE_OUT_BACK") return EASE_OUT_BACK;
+//	if(name == "EASE_IN_OUT_BACK") return EASE_IN_OUT_BACK;
+//	if(name == "EASE_OUT_IN_BACK") return EASE_OUT_IN_BACK;
+//
+//	if(name == "EASE_IN_BOUNCE") return EASE_IN_BOUNCE;
+//	if(name == "EASE_OUT_BOUNCE") return EASE_OUT_BOUNCE;
+//	if(name == "EASE_IN_OUT_BOUNCE") return EASE_IN_OUT_BOUNCE;
+//	if(name == "EASE_OUT_IN_BOUNCE") return EASE_OUT_IN_BOUNCE;
+//
+//	if(name == "EASE_IN_ELASTIC") return EASE_IN_ELASTIC;
+//	if(name == "EASE_OUT_ELASTIC") return EASE_OUT_ELASTIC;
+//	if(name == "EASE_IN_OUT_ELASTIC") return EASE_IN_OUT_ELASTIC;
+//	if(name == "EASE_OUT_IN_ELASTIC") return EASE_OUT_IN_ELASTIC;
 
 	if(name == "BOUNCE_IN_CUSTOM") return BOUNCE_IN_CUSTOM;
 	if(name == "BOUNCE_OUT_CUSTOM") return BOUNCE_OUT_CUSTOM;
@@ -721,21 +721,21 @@ inline void ofxAnimatable::fillInParams(float &p1, float &p2, float &p3, float &
 			p4 = cubicBezierParamBy;
 			break;
 
-		case EASE_IN_ELASTIC:
-		case EASE_OUT_ELASTIC:
-		case EASE_IN_OUT_ELASTIC:
-		case EASE_OUT_IN_ELASTIC:
-			p1 = elasticGain;
-			p2 = elasticFreq;
-			p3 = elasticDecay;
-			break;
-
-		case EASE_IN_BACK:
-		case EASE_OUT_BACK:
-		case EASE_IN_OUT_BACK:
-		case EASE_OUT_IN_BACK:
-			p1 = easeBackOffset;
-			break;
+//		case EASE_IN_ELASTIC:
+//		case EASE_OUT_ELASTIC:
+//		case EASE_IN_OUT_ELASTIC:
+//		case EASE_OUT_IN_ELASTIC:
+//			p1 = elasticGain;
+//			p2 = elasticFreq;
+//			p3 = elasticDecay;
+//			break;
+//
+//		case EASE_IN_BACK:
+//		case EASE_OUT_BACK:
+//		case EASE_IN_OUT_BACK:
+//		case EASE_OUT_IN_BACK:
+//			p1 = easeBackOffset;
+//			break;
 
 		case BOUNCE_IN_CUSTOM:
 		case BOUNCE_OUT_CUSTOM:
@@ -921,44 +921,44 @@ float ofxAnimatable::calcCurveAt(float percent, AnimCurve type, float p1, float 
 		}
 
 												///////////////////////////////////////// BACK
-
-		case EASE_IN_BACK:
-			r = easeInBack(percent, p1); break;
-
-		case EASE_OUT_BACK:
-			r = easeOutBack(percent, p1); break;
-
-		case EASE_OUT_IN_BACK:
-			r = easeOutInBack(percent, p1); break;
-
-		case EASE_IN_OUT_BACK:
-			r = easeInOutBack(percent, p1); break;
-
-												///////////////////////////////////////// BOUNCE
-		case EASE_IN_BOUNCE:
-			r = easeInBounce(percent); break;
-
-		case EASE_OUT_BOUNCE:
-			r = easeOutBounce(percent); break;
-
-		case EASE_IN_OUT_BOUNCE:
-			r = easeInOutBounce(percent); break;
-
-		case EASE_OUT_IN_BOUNCE:
-			r = easeOutInBounce(percent); break;
-
-												///////////////////////////////////////// ELASTIC
-		case EASE_IN_ELASTIC:
-			r = easeInElastic(percent, p1, p2, p3); break;
-
-		case EASE_OUT_ELASTIC:
-			r = easeOutElastic(percent, p1, p2, p3); break;
-
-		case EASE_IN_OUT_ELASTIC:
-			r = easeInOutElastic(percent, p1, p2, p3); break;
-
-		case EASE_OUT_IN_ELASTIC:
-			r = easeOutInElastic(percent, p1, p2, p3); break;
+//
+//		case EASE_IN_BACK:
+//			r = easeInBack(percent, p1); break;
+//
+//		case EASE_OUT_BACK:
+//			r = easeOutBack(percent, p1); break;
+//
+//		case EASE_OUT_IN_BACK:
+//			r = easeOutInBack(percent, p1); break;
+//
+//		case EASE_IN_OUT_BACK:
+//			r = easeInOutBack(percent, p1); break;
+//
+//												///////////////////////////////////////// BOUNCE
+//		case EASE_IN_BOUNCE:
+//			r = easeInBounce(percent); break;
+//
+//		case EASE_OUT_BOUNCE:
+//			r = easeOutBounce(percent); break;
+//
+//		case EASE_IN_OUT_BOUNCE:
+//			r = easeInOutBounce(percent); break;
+//
+//		case EASE_OUT_IN_BOUNCE:
+//			r = easeOutInBounce(percent); break;
+//
+//												///////////////////////////////////////// ELASTIC
+//		case EASE_IN_ELASTIC:
+//			r = easeInElastic(percent, p1, p2, p3); break;
+//
+//		case EASE_OUT_ELASTIC:
+//			r = easeOutElastic(percent, p1, p2, p3); break;
+//
+//		case EASE_IN_OUT_ELASTIC:
+//			r = easeInOutElastic(percent, p1, p2, p3); break;
+//
+//		case EASE_OUT_IN_ELASTIC:
+//			r = easeOutInElastic(percent, p1, p2, p3); break;
 
 												///////////////////////////////////////// CUSTOM BOUNCE
 		case BOUNCE_IN_CUSTOM:
@@ -1044,7 +1044,6 @@ void ofxAnimatable::update(float dt){
 				case PLAY_N_TIMES:
 					if(playcount_ == desiredPlayCount - 1){
 						ofNotifyEvent(animFinished, args, this);
-						if(animEndedLambdaFunc != nullptr) animEndedLambdaFunc();
 					}else{
 						playcount_++;
 						animating_ = true;
@@ -1054,7 +1053,6 @@ void ofxAnimatable::update(float dt){
 
 				case PLAY_ONCE:
 					ofNotifyEvent(animFinished, args, this);
-					if(animEndedLambdaFunc != nullptr) animEndedLambdaFunc();
 					break;	//nothing to do;
 					
 				case LOOP_BACK_AND_FORTH:
@@ -1082,7 +1080,6 @@ void ofxAnimatable::update(float dt){
 					if (playcount_ >= 1){	//time to stop
 						//we are done
 						ofNotifyEvent(animFinished, args, this);
-						if(animEndedLambdaFunc != nullptr) animEndedLambdaFunc();
 					}else{	
 						direction_ = -direction_;
 						animating_ = true;
@@ -1101,7 +1098,6 @@ void ofxAnimatable::update(float dt){
 				case LOOP_BACK_AND_FORTH_N_TIMES:
 					if ((playcount_ + 1) >= desiredPlayCount * 2 && direction_ == -1){	//time to stop
 						ofNotifyEvent(animFinished, args, this);
-						if(animEndedLambdaFunc != nullptr) animEndedLambdaFunc();
 						//we are done
 					}else{
 						direction_ = -direction_;
@@ -1131,12 +1127,12 @@ bool ofxAnimatable::isCurveInvertable(AnimCurve c){
 		case EASE_OUT: return true;
 		case QUADRATIC_EASE_IN: return true; /**/
 		case QUADRATIC_EASE_OUT: return true;
-		case EASE_IN_BOUNCE: return true; /**/
-		case EASE_OUT_BOUNCE: return true;
-		case EASE_IN_BACK: return true; /**/
-		case EASE_OUT_BACK: return true;
-		case EASE_IN_ELASTIC: return true; /**/
-		case EASE_OUT_ELASTIC: return true;
+//		case EASE_IN_BOUNCE: return true; /**/
+//		case EASE_OUT_BOUNCE: return true;
+//		case EASE_IN_BACK: return true; /**/
+//		case EASE_OUT_BACK: return true;
+//		case EASE_IN_ELASTIC: return true; /**/
+//		case EASE_OUT_ELASTIC: return true;
 		default: break;
 	}
 	return false;
@@ -1148,12 +1144,12 @@ AnimCurve ofxAnimatable::getInverseCurve(AnimCurve c){
 		case EASE_OUT: return EASE_IN;
 		case QUADRATIC_EASE_IN: return QUADRATIC_EASE_OUT; /**/
 		case QUADRATIC_EASE_OUT: return QUADRATIC_EASE_IN;
-		case EASE_IN_BOUNCE: return EASE_OUT_BOUNCE; /**/
-		case EASE_OUT_BOUNCE: return EASE_IN_BOUNCE;
-		case EASE_IN_BACK: return EASE_OUT_BACK; /**/
-		case EASE_OUT_BACK: return EASE_IN_BACK;
-		case EASE_IN_ELASTIC: return EASE_OUT_ELASTIC; /**/
-		case EASE_OUT_ELASTIC: return EASE_IN_ELASTIC;
+//		case EASE_IN_BOUNCE: return EASE_OUT_BOUNCE; /**/
+//		case EASE_OUT_BOUNCE: return EASE_IN_BOUNCE;
+//		case EASE_IN_BACK: return EASE_OUT_BACK; /**/
+//		case EASE_OUT_BACK: return EASE_IN_BACK;
+//		case EASE_IN_ELASTIC: return EASE_OUT_ELASTIC; /**/
+//		case EASE_OUT_ELASTIC: return EASE_IN_ELASTIC;
 		default: break;
 	}
 	ofLogError("ofxAnimatable") << getCurveName(c) << " curve has no inverse!";
